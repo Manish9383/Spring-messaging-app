@@ -26,5 +26,12 @@ public class HelloController {
     public String deleteHello() {
         return "Hello from BridgeLabz - DELETE Method";
     }
+    
+  //UC2
+    @GetMapping("/query") 
+    public String getHelloWithQuery(@RequestParam String name) { //UC2
+        return "Hello " + name + " from BridgeLabz"; //UC2
+    }
+    
 }
 
