@@ -2,6 +2,7 @@ package com.bridgelabz.springmessagingapp.restController;
 
 
 import org.springframework.web.bind.annotation.*;
+import com.bridgelabz.springmessagingapp.dto.UserDTO; 
 
 @RestController
 @RequestMapping("/hello")
@@ -33,12 +34,28 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz"; //UC2
     }
     
+<<<<<<< HEAD
     //UC3
+=======
+  //UC3
+>>>>>>> UC4_use_post_request_method
     
     @GetMapping("/param/{name}")
     public String sayHello(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
     }
     
+<<<<<<< HEAD
+=======
+    
+    // UC4 - POST request with UserDTO
+    @PostMapping("/post") // UC4
+    public String postHelloWithBody(@RequestBody UserDTO user) { // UC4
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz"; // UC4
+    }
+    
+    
+    
+>>>>>>> UC4_use_post_request_method
 }
 
