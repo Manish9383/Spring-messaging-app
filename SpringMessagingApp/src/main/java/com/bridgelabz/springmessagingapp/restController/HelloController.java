@@ -34,19 +34,15 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz"; //UC2
     }
     
-<<<<<<< HEAD
-    //UC3
-=======
+
+    
   //UC3
->>>>>>> UC4_use_post_request_method
     
     @GetMapping("/param/{name}")
     public String sayHello(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
     }
     
-<<<<<<< HEAD
-=======
     
     // UC4 - POST request with UserDTO
     @PostMapping("/post") // UC4
@@ -54,8 +50,11 @@ public class HelloController {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz"; // UC4
     }
     
+    // UC5 - PUT request using Path Variable & Query Parameter
+    @PutMapping("/put/{firstName}") // UC5
+    public String putHelloWithPathAndQuery(@PathVariable String firstName, @RequestParam String lastName) { // UC5
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz"; // UC5
+    }
     
-    
->>>>>>> UC4_use_post_request_method
 }
 
